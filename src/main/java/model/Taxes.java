@@ -3,6 +3,8 @@ package model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -23,5 +25,4 @@ public class Taxes {
 	private String retrict;
 	@Column(name = "typetaxes")
 	private String typeTaxes;
-
 }
