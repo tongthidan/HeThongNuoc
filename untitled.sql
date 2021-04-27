@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS Bill;
 DROP TABLE IF EXISTS MoneyUnit;
 DROP TABLE IF EXISTS Family;
 CREATE TABLE Account (ID int(10) NOT NULL AUTO_INCREMENT, UserID int(10) NOT NULL, Username varchar(255), Password varchar(255), PRIMARY KEY (ID));
-CREATE TABLE `User` (ID int(10) NOT NULL AUTO_INCREMENT, `Family ID` int(10) NOT NULL, Acc int(10), FullName varchar(255), Gmail varchar(255), SDT varchar(255), Address varchar(255), Role int(10), PRIMARY KEY (ID));
+CREATE TABLE `User` (ID int(10) NOT NULL AUTO_INCREMENT, `Family ID` int(10) NOT NULL, FullName varchar(255), Gmail varchar(255), SDT varchar(255), Address varchar(255), Role int(10), PRIMARY KEY (ID));
 CREATE TABLE Taxes (ID int(10) NOT NULL AUTO_INCREMENT, NameTaxes varchar(255), Retrict varchar(255), TypeTaxes varchar(255), PRIMARY KEY (ID));
 CREATE TABLE Bill (ID int(10) NOT NULL AUTO_INCREMENT, `Family ID` int(10) NOT NULL, TaxesID int(10) NOT NULL, Total float NOT NULL, MonthUse int(10) NOT NULL, Status varchar(255), SoNuoc int(10) NOT NULL, PRIMARY KEY (ID));
 CREATE TABLE MoneyUnit (ID int(10) NOT NULL AUTO_INCREMENT, BillID int(10) NOT NULL, Name varchar(255), Dinhmuc varchar(255), MoneyUnit varchar(255), PRIMARY KEY (ID));
