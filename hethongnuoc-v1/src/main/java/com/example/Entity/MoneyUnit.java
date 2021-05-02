@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 public class MoneyUnit implements Serializable {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column(name ="MoneyUnitID")
+	 @Column(name ="ID")
 	 private int idMoneyUnit;
 	 
 
@@ -20,7 +20,7 @@ public class MoneyUnit implements Serializable {
 	private String name;
 	@Column(name ="dinhmuc")
 	private String dinhMuc;
-	@Column(name ="MoneyUnit")
+	@Column(name ="money_unit")
 	private String moneyUnit;
 
 	public MoneyUnit() {

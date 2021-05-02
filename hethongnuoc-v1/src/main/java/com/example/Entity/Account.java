@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,25 +19,20 @@ public class Account implements Serializable{
 	@Column(name = "ID")
 	private int idAccount;
 	
-	@OneToOne
-	@JoinColumn(name ="UserID", nullable = false)
 	
-	private User user;
-	
-	@Column(name = "Username")
+	@Column(name = "USERNAME")
 	private String username;
-	@Column (name ="Password")
+	@Column (name ="PASSWORD")
 	private String password;
 	public Account() {
 		super();
 	}
-	public Account(int idAccount, User user, String username, String password) {
-		super();
-		this.idAccount = idAccount;
-		this.user = user;
-		this.username = username;
-		this.password = password;
-	}
+	@OneToOne
+	@JoinColumn(name = "USER_ID")
+	private User user;
+	
+
+
 	public int getIdAccount() {
 		return idAccount;
 	}

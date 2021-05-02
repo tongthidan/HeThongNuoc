@@ -14,17 +14,17 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
-@Table(name ="bil")
+@Table(name ="bill")
 public class Bill implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
 	private int idBill;
 	
-	@Column(name ="MonthUse")
+	@Column(name ="month_use")
 	private int monthUse;
 	
-	@Column(name ="SoNuoc")
+	@Column(name ="so_nuoc")
 	private int soNuoc;
 	
 	@Column(name = "Total")
@@ -34,10 +34,11 @@ public class Bill implements Serializable{
 	private String status;
 	
 	@OneToOne
-	@JoinColumn(name ="TaxesID",nullable = false)
+	@JoinColumn(name ="ID")
 	private Taxes taxes;
+	
 	@OneToOne
-	@JoinColumn(name ="MoneyUnitID",nullable = false)
+	@JoinColumn(name ="ID",nullable = false)
 	private MoneyUnit moneyUnit;
 	
 	public MoneyUnit getMoneyUnit() {

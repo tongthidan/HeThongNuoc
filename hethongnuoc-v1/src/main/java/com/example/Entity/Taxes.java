@@ -14,11 +14,11 @@ public class Taxes implements Serializable{
 	@Column(name ="ID")
 	private int idTaxes;
 	
-	@Column(name ="NameTaxes")
+	@Column(name ="name_taxes")
 	private String nameTaxes;
 	@Column(name ="Retrict")
 	private String retrict;
-	@Column(name ="TypeTaxes")
+	@Column(name ="type_taxes")
 	private String typeTaxes;
 	
 	public Taxes() {
