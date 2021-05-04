@@ -7,7 +7,7 @@ import com.example.Entity.User;
 public class AccountMapping {
 	public Account AccountDTOMapperAccount(AccountDTO accountDTO) {
 		Account acc = new Account();
-		User user = new User();
+		
 		//acc.setUser(user.getIdUser());
 		
 		acc.setIdAccount(accountDTO.getId());

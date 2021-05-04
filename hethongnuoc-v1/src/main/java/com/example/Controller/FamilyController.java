@@ -4,6 +4,8 @@ package com.example.Controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +33,7 @@ public class FamilyController {
 	public FamilyRepository familyRepository;
 	FamilyMapping familyMapping = new FamilyMapping();
 
-	// getALl
+	// getAll- ok
 	@GetMapping(value = "/getAllFamily")
 	@ResponseBody
 	public ResponseEntity<?> getAllFamily() {
@@ -47,8 +49,8 @@ public class FamilyController {
 
 	}
 
-	// findByName
-	@GetMapping("/find/{nameFamily}")
+	// findByName- ok
+	@GetMapping("/findFamilyByName/{nameFamily}")
 	@ResponseBody
 	public ResponseEntity<?> findByNameFamily(@PathVariable("nameFamily") String nameFamily) {
 		List<Family> listFamilies = familyRepository.findByNameFamily(nameFamily);
@@ -59,29 +61,32 @@ public class FamilyController {
 		}
 		return new ResponseEntity<>(listFamilyDTOs, HttpStatus.OK);
 	}
-
-	@PutMapping("/{id}")
+	// update family- ok
+	@PutMapping("/changeFamily/{id}")
 	@ResponseBody
-	public HttpStatus modifiLogin(@PathVariable String id, @RequestBody Family family) {
+	public HttpStatus modifiLogin(@PathVariable long id, @RequestBody Family family) {
 
 		try {
 
 			Family f = familyRepository.findById(id).orElse(null);
 			System.out.println(f);
-			if (family.getNameFamily() == null) {
-				family.setNameFamily(f.getNameFamily());
-			} 
-			else if (family.getDatePayment() == null) {
-				family.setDatePayment(f.getDatePayment());
+			if(f != null) {
+				if (family.getNameFamily() == null) {
+					f.setNameFamily(f.getNameFamily());
+				} 
+				else if (family.getDatePayment() == null) {
+					f.setDatePayment(f.getDatePayment());
+				}
+				else if (family.getTypePayment() == null) {
+					f.setTypePayment(f.getTypePayment());
+				} else {
+					f.setNameFamily(family.getNameFamily());
+					f.setDatePayment(family.getDatePayment());
+					f.setTypePayment(family.getTypePayment());
+				}
+				familyRepository.save(f);
 			}
-		else if (family.getTypePayment() == null) {
-				family.setTypePayment(f.getTypePayment());
-			} else {
-				family.setNameFamily(family.getNameFamily());
-				family.setDatePayment(family.getDatePayment());
-				family.setTypePayment(family.getTypePayment());
-			}
-			familyRepository.save(family);
+			
 			return HttpStatus.OK;
 
 		} catch (Exception e) {
@@ -96,10 +101,6 @@ public class FamilyController {
 	@ResponseBody
 	public HttpStatus createFamily(@RequestBody Family family) {
 		try {
-			//family.setIdFamily(3);
-			family.setNameFamily("DAN P");
-//			family.setDatePayment("2021-01-02");
-			family.setTypePayment("Vi MOMO");
 			familyRepository.save(family);
 			return HttpStatus.OK;
 
@@ -110,12 +111,13 @@ public class FamilyController {
 
 	}
 
-	// deleteFamily -
-	@DeleteMapping(value = "delete/{nameFamily}")
+	// deleteFamily -ok
+	@DeleteMapping(value = "deleteFamilyById/{id}")
+	@Transactional
 	@ResponseBody
-	public HttpStatus deleteFamilyByNameFamily(@PathVariable("nameFamily") String nameFamily) {
+	public HttpStatus deleteFamilyById(@PathVariable("id") long  id) {
 		try {
-			familyRepository.deleteByNameFamily(nameFamily);
+			familyRepository.deleteById(id);
 			return HttpStatus.OK;
 		} catch (Exception e) {
 			// TODO: handle exception

@@ -9,7 +9,7 @@ import com.example.Entity.Family;
 
 @Repository
 
-public interface FamilyRepository extends JpaRepository<Family, String> {
+public interface FamilyRepository extends JpaRepository<Family, Long> {
 	List<Family> findByNameFamily(String nameFamily);
 
 	void deleteByNameFamily(String nameFamily);
