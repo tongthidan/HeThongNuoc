@@ -13,7 +13,7 @@ public class MoneyUnit implements Serializable {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 @Column(name ="ID")
-	 private int idMoneyUnit;
+	 private long idMoneyUnit;
 	 
 
 	@Column(name ="Name")
@@ -26,10 +26,10 @@ public class MoneyUnit implements Serializable {
 	public MoneyUnit() {
 		super();
 	}
-	public int getIdMoneyUnit() {
+	public long getIdMoneyUnit() {
 		return idMoneyUnit;
 	}
-	public void setIdMoneyUnit(int idMoneyUnit) {
+	public void setIdMoneyUnit(long idMoneyUnit) {
 		this.idMoneyUnit = idMoneyUnit;
 	}
 

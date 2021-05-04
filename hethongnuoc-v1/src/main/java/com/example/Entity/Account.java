@@ -17,7 +17,7 @@ public class Account implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
-	private int idAccount;
+	private long idAccount;
 	
 	
 	@Column(name = "USERNAME")
@@ -27,24 +27,18 @@ public class Account implements Serializable{
 	public Account() {
 		super();
 	}
-	@OneToOne
-	@JoinColumn(name = "USER_ID")
-	private User user;
+	
 	
 
 
-	public int getIdAccount() {
+	public long getIdAccount() {
 		return idAccount;
 	}
-	public void setIdAccount(int idAccount) {
+	public void setIdAccount(long idAccount) {
 		this.idAccount = idAccount;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
+	
+	
 	public String getUsername() {
 		return username;
 	}

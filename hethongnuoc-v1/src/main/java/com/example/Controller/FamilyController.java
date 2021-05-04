@@ -71,14 +71,14 @@ public class FamilyController {
 			if (family.getNameFamily() == null) {
 				family.setNameFamily(f.getNameFamily());
 			} 
-//			else if (family.getDatePayment() == null) {
-//				family.setDatePayment(f.getDatePayment());
-//			}
+			else if (family.getDatePayment() == null) {
+				family.setDatePayment(f.getDatePayment());
+			}
 		else if (family.getTypePayment() == null) {
 				family.setTypePayment(f.getTypePayment());
 			} else {
 				family.setNameFamily(family.getNameFamily());
-//				family.setDatePayment(family.getDatePayment());
+				family.setDatePayment(family.getDatePayment());
 				family.setTypePayment(family.getTypePayment());
 			}
 			familyRepository.save(family);

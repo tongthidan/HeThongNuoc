@@ -12,7 +12,7 @@ public class Taxes implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
-	private int idTaxes;
+	private long idTaxes;
 	
 	@Column(name ="name_taxes")
 	private String nameTaxes;
@@ -25,19 +25,12 @@ public class Taxes implements Serializable{
 		super();
 	}
 
-	public Taxes(int idTaxes, String nameTaxes, String retrict, String typeTaxes) {
-		super();
-		this.idTaxes = idTaxes;
-		this.nameTaxes = nameTaxes;
-		this.retrict = retrict;
-		this.typeTaxes = typeTaxes;
-	}
-
-	public int getIdTaxes() {
+	
+	public long getIdTaxes() {
 		return idTaxes;
 	}
 
-	public void setIdTaxes(int idTaxes) {
+	public void setIdTaxes(long idTaxes) {
 		this.idTaxes = idTaxes;
 	}
 

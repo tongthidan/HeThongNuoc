@@ -23,15 +23,15 @@ public class Family implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
-	private int idFamily;
+	private long idFamily;
 	
 	@Column(name ="NAME_FAMILY")
 	private String nameFamily;
 	
-	@Column(name ="DATE_FAMILY")
+	@Column(name ="DATE_PAYMENT")
 	private String datePayment;
 	
-	@Column(name ="TYPE_FAMILY")
+	@Column(name ="TYPE_PAYMENT")
 	private String typePayment;
 	
 	 
@@ -49,19 +49,12 @@ public class Family implements Serializable{
 	
 	
 
-	public Family(int idFamily, String nameFamily,  String typePayment) {
-		super();
-		this.idFamily = idFamily;
-		this.nameFamily = nameFamily;
-		this.datePayment = datePayment;
-		this.typePayment = typePayment;
-	}
 
-	public int getIdFamily() {
+	public long getIdFamily() {
 		return idFamily;
 	}
 
-	public void setIdFamily(int idFamily) {
+	public void setIdFamily(long idFamily) {
 		this.idFamily = idFamily;
 	}
 

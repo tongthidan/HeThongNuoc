@@ -2,11 +2,14 @@ package com.example.DTO;
 
 import lombok.Data;
 public class AccountDTO {
-	 int id;
-
+	 long id;
+//	 String userID;
 	 String userName;
 	 
 	
+
+
+
 	public String getUserName() {
 		return userName;
 	}
@@ -26,11 +29,11 @@ public class AccountDTO {
 		
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

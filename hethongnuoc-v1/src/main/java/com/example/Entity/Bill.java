@@ -19,7 +19,7 @@ public class Bill implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
-	private int idBill;
+	private long idBill;
 	
 	@Column(name ="month_use")
 	private int monthUse;
@@ -58,11 +58,11 @@ public class Bill implements Serializable{
 		super();
 	}
 
-	public int getIdBill() {
+	public long getIdBill() {
 		return idBill;
 	}
 
-	public void setIdBill(int idBill) {
+	public void setIdBill(long idBill) {
 		this.idBill = idBill;
 	}
 

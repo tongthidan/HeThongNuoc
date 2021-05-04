@@ -7,11 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.example.Entity.Account;
 
-public interface AccountRepository extends JpaRepository<Account, String> {
+public interface AccountRepository extends JpaRepository<Account, Long> {
 	List<Account> findByUsername(String username);
-//	@Query(value =  "SELECT a.USERNAME, a.PASSWORD, a.USER_ID\r\n"
-//			+ "FROM account As a, user u\r\n"
-//			+ "WHERE a.USER_ID = u.ID ")
-//	List<Account> getAllAccount();
 	
 }
