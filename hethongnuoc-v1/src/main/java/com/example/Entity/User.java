@@ -21,6 +21,8 @@ public class User implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID")
 	private long idUser;
+	@Column(name = "ma_nd")
+	private String maND;
 	@OneToOne
 	@JoinColumn(name = "account_id")
 	private Account account;
@@ -28,6 +30,7 @@ public class User implements Serializable {
 	@JoinColumn(name = "FamilyID", nullable = false)
 
 	private Family family;
+	
 
 	@Column(name = "full_name")
 	private String fullName;
@@ -38,13 +41,35 @@ public class User implements Serializable {
 	@Column(name = "Address")
 	private String address;
 	@Column(name = "Role")
-	private int role;
+	private String role;
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+
+	public String getMaND() {
+		return maND;
+	}
+
+
+	public void setMaND(String maND) {
+		this.maND = maND;
+	}
+
+
+	public Account getAccount() {
+		return account;
+	}
+
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+
+	
 
 	public long getIdUser() {
 		return idUser;
@@ -54,13 +79,11 @@ public class User implements Serializable {
 		this.idUser = idUser;
 	}
 
-	public Family getFamily() {
-		return family;
+	public long getFamily() {
+		return family.getIdFamily();
 	}
 
-	public void setFamily(Family family) {
-		this.family = family;
-	}
+	
 
 	public String getFullName() {
 		return fullName;
@@ -94,11 +117,11 @@ public class User implements Serializable {
 		this.address = address;
 	}
 
-	public int getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(int role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 
