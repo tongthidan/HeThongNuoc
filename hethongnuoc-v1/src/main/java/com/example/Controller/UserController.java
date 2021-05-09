@@ -57,6 +57,7 @@ public class UserController {
 	 @ResponseBody
 	 public HttpStatus createNewUser(@RequestBody User user) {
 		 try {
+			 
 			 userRepository.save(user);
 			return HttpStatus.OK;
 		} catch (Exception e) {
