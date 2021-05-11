@@ -1,0 +1,10 @@
+﻿.noteDel, .noteEdit, .noteRes {
+    display: none;
+    position: absolute;
+    background: white;
+    text-align: center;
+    right: 65px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+}

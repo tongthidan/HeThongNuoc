@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.Entity.MoneyUnit;
 
 public interface MoneyUnitRepository  extends JpaRepository<MoneyUnit, Long>{
-	List<MoneyUnit> findByName(String name);
+//	List<MoneyUnit> findByName(String name);
 }

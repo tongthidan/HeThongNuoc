@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="./css/all.css" />
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="./css/sweetalert2.min.css" />
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="./js/sweetalert2.min.js"></script>
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Khai báo sử dụng thư viện CKEditor -->
+    <!-- <script src="https://cdn.ckeditor.com/4.5.6/basic/ckeditor.js"></script> -->
+
+    <!-- Khai báo sử dụng thư viện Summernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+
+    <!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="./js/popper.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="./js/bootstrap-material-design.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <!-- Logo trường và tên trường -->
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="./assets/avatar/VCW.jpg" class="img-fluid" alt="Avatar" />
+                    <figcaption class="roboto-medium text-center">Nước sạch Hà Nội
+                        <br/>
+                        <p class="roboto-condensed-light">Công ty nước Sạch Sông Đà</p>
+                    </figcaption>
+                    <!-- / Logo trường và tên trường -->
+                </figure>
+                <!-- menu -->
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i>&nbsp; Quản lí hộ sử dụng <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="AddHo.html"><i class="fas fa-plus fa-fw"></i>&nbsp; Thêm học hộ sử sụng</a>
+                                </li>
+                                <li>
+                                    <a href="ListHo.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách hộ </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i>&nbsp; Quản lí số nước <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                
+                                <li>
+                                    <a href="Sltieuthu.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Lượng nước tiêu thụ</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="far fa-newspaper"></i>&nbsp; Quản lí Tiền nước <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                
+                                <li>
+                                    <a href="ListThanhtoan.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách Hóa đơn</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /menu -->
+            </div>
+        </section>
+
+        <section class="full-box page-content">
+
+
+            <!-- /Thay đổi thông tin user, logout -->
+            <!-- Page header -->
+            <div class="full-box page-header">
+                <div class="header">
+                    <h1>
+                        Chi nhánh Văn Phú
+                    </h1>
+                </div>
+            </div><br>
+
+            <!--CONTENT-->
+            <div class="container-fluid">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/nuoc.jpg" alt="Los Angeles" width="1100" height="500">
+                            <div class="carousel-caption">
+                                <h1>Nguồn nước</h1>
+                                <h3>Được dẫn từ Sông Đà Hòa Bình với chiều dài toàn tuyến là 46 km</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/nuoc1.jpg" alt="Chicago" width="1100" height="500">
+                            <div class="carousel-caption">
+                                <h1>Xử lý</h1>
+                                <h3>Nguồn được luôn được sử lý theo tiêu chuẩn quốc tế 
+                                </h3>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="./assets/img/nuoc2.jpg" alt="New York" width="1100" height="500">
+                            <div class="carousel-caption">
+                                <h1>Sản lượng</h1>
+                                <h3>Nhà máy luôn đạt công suất khoảng 672.000m3/ngày, đêm </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

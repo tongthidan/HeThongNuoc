@@ -16,47 +16,45 @@ public class Taxes implements Serializable{
 	
 	@Column(name ="name_taxes")
 	private String nameTaxes;
-	@Column(name ="Retrict")
-	private String retrict;
-	@Column(name ="type_taxes")
-	private String typeTaxes;
+	@Column(name ="value_taxes")
+	private double gia_tri_bac;
+	
 	
 	public Taxes() {
 		super();
 	}
 
-	
+
 	public long getIdTaxes() {
 		return idTaxes;
 	}
+
 
 	public void setIdTaxes(long idTaxes) {
 		this.idTaxes = idTaxes;
 	}
 
+
 	public String getNameTaxes() {
 		return nameTaxes;
 	}
+
 
 	public void setNameTaxes(String nameTaxes) {
 		this.nameTaxes = nameTaxes;
 	}
 
-	public String getRetrict() {
-		return retrict;
+
+	public double getGia_tri_bac() {
+		return gia_tri_bac;
 	}
 
-	public void setRetrict(String retrict) {
-		this.retrict = retrict;
+
+	public void setGia_tri_bac(double gia_tri_bac) {
+		this.gia_tri_bac = gia_tri_bac;
 	}
 
-	public String getTypeTaxes() {
-		return typeTaxes;
-	}
-
-	public void setTypeTaxes(String typeTaxes) {
-		this.typeTaxes = typeTaxes;
-	}
+	
 	
 	
 }

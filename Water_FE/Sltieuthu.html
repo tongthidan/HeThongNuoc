@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản lượng nước tiêu thụ</title>
+
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <link rel="stylesheet" href="./css/bootstrap-material-design.min.css" />
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="./css/all.css" />
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="./css/sweetalert2.min.css" />
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="./js/sweetalert2.min.js"></script>
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bonus.css" />
+
+    <!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="./js/popper.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="./js/bootstrap-material-design.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/main.js"></script>
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="./css/datatable.css" />
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <!-- Logo trường và tên trường -->
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="./assets/avatar/VCW.jpg" class="img-fluid" alt="Avatar" />
+                    <figcaption class="roboto-medium text-center">Nước sạch Hà nội
+                        <br />
+                        <p class="roboto-condensed-light">Công ty nước sạch Sông đà</p>
+                    </figcaption>
+                    <!-- / Logo trường và tên trường -->
+                </figure>
+                <!-- menu -->
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i>&nbsp; Quản lí hộ sử
+                                dụng <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="AddHo.html"><i class="fas fa-plus fa-fw"></i>&nbsp; Thêm học hộ sử
+                                        sụng</a>
+                                </li>
+                                <li>
+                                    <a href="ListHo.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách hộ
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i>&nbsp; Quản lí số
+                                nước <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+
+                                <li>
+                                    <a href="Sltieuthu.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Lượng
+                                        nước tiêu thụ</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="far fa-newspaper"></i>&nbsp; Quản lí Tiền nước
+                                <i class="fas fa-chevron-down"></i></a>
+                            <ul>
+
+                                <li>
+                                    <a href="ListThanhtoan.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách
+                                        Hóa đơn</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /menu -->
+            </div>
+        </section>
+
+        <section class="full-box page-content">
+            <!-- Thay đổi thông tin user, logout -->
+            <div class="header">
+                <h1>
+                    Chi nhánh Văn Phú
+                </h1>
+            </div>
+            <div class="dis">
+                <div class="inline-block breadscrum-section">
+                    <span>Quản lí lượng nước</span>
+                    <i class="fa fa-angle-right"></i>
+                    <span>Lượng nước tiêu thụ</span>
+                    <i class=""></i>
+                </div>
+
+            </div>
+            <!-- /Thay đổi thông tin user, logout -->
+            <!-- Page header -->
+            <div class="full-box page-header">
+                <h2 class="text-header">
+                    LƯỢNG NƯỚC CÁC HỘ SỬ DỤNG
+                </h2><br>
+            </div>
+            <div class="container-fluid">
+                <ul class="full-box list-unstyled page-nav-tabs">
+                    <li>
+                        <a href="AddHo.html">THÊM HỘ<i class="fas fa-plus fa-fw"></i>
+                            <!-- Link thêm -->
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active" href="#">DANH SÁCH HỘ<i class="fas fa-clipboard-list fa-fw"></i>
+                            <!-- Link danh sách -->
+                        </a>
+                    </li>
+                    <div class="cn">
+                        <label for="lop">Tháng:</label>
+                        <input type="month" class="form-control" placeholder="">
+                    </div>
+                    
+                </ul>
+            </div>
+
+            <!--CONTENT-->
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table table-dark table-sm" id="example">
+                        <thead>
+                            <tr class="text-center roboto-medium">
+                                <th>STT</th>
+                                <th>Mã hộ</th>
+                                <th>Chủ hộ</th>
+                                <th>Địa chỉ</th>
+                                <th>Diện tính phí</th>
+                                <!--Diện 1 là nghèo 0 là k nghèo-->
+                                <th>Chỉ số tháng trước</th>
+                                <th>Chỉ số tháng sau</th>
+                                <th>lượng nước tiêu thụ</th>
+                                <th style="width: 45px;">ACTION</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="text-align: center;" scope="row"></th>
+                                <td style="text-align: center;"></td>
+
+
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="display: flex;">
+                                    <div class="editpro" style="margin-top:-7px;">
+                                        <a href="EditNuoc.html" class="btn btn-success"><i class="far fa-edit"></i></a>
+                                        <div class="noteEdit">Sửa hộ</div>
+                                    </div>&nbsp;
+                                    <div class="delpro" style="margin-top:-7px;">
+                                        <a href="#" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                        <div class="noteDel">Xoá hộ</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center;" scope="row"></th>
+
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="text-align: center;"></td>
+                                <td style="display: flex;">
+                                    <div class="editpro" style="margin-top:-7px;">
+                                        <a href="EditNuoc.html" class="btn btn-success"><i class="far fa-edit"></i></a>
+                                        <div class="noteEdit">Sửa hộ</div>
+                                    </div>&nbsp;
+                                    <div class="delpro" style="margin-top:-7px;">
+                                        <a href="#" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                                        <div class="noteDel">Xoá hộ</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        $(".editpro").mouseenter(function () {
+            $(this).find(".noteEdit").show();
+        }).mouseleave(function () {
+            $(this).find(".noteEdit").hide();
+        });
+		// <-- SỬA ĐIỂM
+    </script>
+    <script type="text/javascript">
+        $(".delpro").mouseenter(function () {
+            $(this).find(".noteDel").show();
+        }).mouseleave(function () {
+            $(this).find(".noteDel").hide();
+        });
+		// <-- XOÁ ĐIỂM
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "pagingType": "full_numbers"
+            });
+        });
+    </script>
+
+</body>
+
+</html>

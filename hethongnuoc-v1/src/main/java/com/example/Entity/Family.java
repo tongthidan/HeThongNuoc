@@ -25,30 +25,34 @@ public class Family implements Serializable{
 	@Column(name ="ID")
 	private long idFamily;
 	
-	@Column(name ="NAME_FAMILY")
-	private String nameFamily;
+	@Column(name ="ten_chu_ho")
+	private String tenChuHo;
 	
-	@Column(name ="DATE_PAYMENT")
-	private String datePayment;
+	@Column(name ="ma_ho")
+	private String maHo;
 	
-	@Column(name ="TYPE_PAYMENT")
-	private String typePayment;
+	@Column(name ="so_can_cuoc")
+	private String CMT;
+	
+	@Column(name = "loai_ho")
+	private String loaiHo;
+	@Column(name = "email")
+	private String email;
+	@Column(name = "sdt")
+	private long sdt;
+	
+	@Column(name = "dia_chi")
+	private String dia_chi;
+	@Column(name = "trang_thai")
+	private String trangThai;
 	
 	 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "family")
 	  private Set<Bill> listBill = new HashSet<>();
 
-	
-	@OneToMany(fetch = FetchType.LAZY,mappedBy = ("family"))
-	private Set<User> listUser = new HashSet<>();
-	
 	public Family() {
 		super();
 	}
-
-	
-	
-
 
 	public long getIdFamily() {
 		return idFamily;
@@ -58,33 +62,68 @@ public class Family implements Serializable{
 		this.idFamily = idFamily;
 	}
 
-	public String getNameFamily() {
-		return nameFamily;
+	public String getTenChuHo() {
+		return tenChuHo;
 	}
 
-	public void setNameFamily(String nameFamily) {
-		this.nameFamily = nameFamily;
+	public void setTenChuHo(String tenChuHo) {
+		this.tenChuHo = tenChuHo;
 	}
 
-	public String getDatePayment() {
-		return datePayment;
+	public String getMaHo() {
+		return maHo;
 	}
 
-	public void setDatePayment(String datePayment) {
-		this.datePayment = datePayment;
+	public void setMaHo(String maHo) {
+		this.maHo = maHo;
 	}
 
-	
-
-	public String getTypePayment() {
-		return typePayment;
+	public String getCMT() {
+		return CMT;
 	}
 
+	public void setCMT(String cMT) {
+		CMT = cMT;
+	}
 
+	public String getLoaiHo() {
+		return loaiHo;
+	}
 
+	public void setLoaiHo(String loaiHo) {
+		this.loaiHo = loaiHo;
+	}
 
-	public void setTypePayment(String typePayment) {
-		this.typePayment = typePayment;
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public long getSdt() {
+		return sdt;
+	}
+
+	public void setSdt(long sdt) {
+		this.sdt = sdt;
+	}
+
+	public String getDia_chi() {
+		return dia_chi;
+	}
+
+	public void setDia_chi(String dia_chi) {
+		this.dia_chi = dia_chi;
+	}
+
+	public String getTrangThai() {
+		return trangThai;
+	}
+
+	public void setTrangThai(String trangThai) {
+		this.trangThai = trangThai;
 	}
 
 	public Set<Bill> getListBill() {
@@ -95,14 +134,5 @@ public class Family implements Serializable{
 		this.listBill = listBill;
 	}
 
-	public Set<User> getListUser() {
-		return listUser;
-	}
-
-	public void setListUser(Set<User> listUser) {
-		this.listUser = listUser;
-	}
-	
-	
 	
 }

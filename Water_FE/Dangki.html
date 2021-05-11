@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng kí</title>
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <link rel="stylesheet" href="./css/bootstrap-material-design.min.css" />
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="./css/all.css" />
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="./css/sweetalert2.min.css" />
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="./js/sweetalert2.min.js"></script>
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bonus.css" />
+
+    <!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="./js/popper.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="./js/bootstrap-material-design.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/main.js"></script>
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="./css/datatable.css" />
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container">
+        <br>
+
+        <p class="text-center">
+            <i class="fas fa-user-circle fa-5x"></i>
+        </p>
+        <p class="text-center">
+            Đăng kí tài khoản của bạn
+        </p>
+
+        <form>
+            <div class="form-row ">
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label for="UserName" class="bmd-label-floating"><i class="fas fa-user-secret"></i> &nbsp; Tài
+                        khoản</label>
+                    <input type="text" class="form-control" id="user" name="user" pattern="[a-zA-Z0-9]{1,35}"
+                        maxlength="35" required />
+                </div>&emsp;
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label for="UserPassword" class="bmd-label-floating"><i class="fas fa-key"></i> &nbsp; Mật khẩu</label>
+					<input type="password" class="form-control" id="password" name="password" maxlength="100"/>
+                </div>
+
+            </div>
+            <div class="form-row ">
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Mã hộ</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>&emsp;
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Tên Chủ hộ</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Địa chỉ</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>&emsp;
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Số căn cước</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Diện tính phí</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Hộ nghèo</label>&emsp;
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Hộ sử dụng</label>
+                </div>&emsp;
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Số sổ hộ nghèo</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="form-row ">
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Mail</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>&emsp;
+                <div class="col-4 col-sm-4 form-group input-box">
+                    <label>Số điện thoại</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary bt-center">Đăng kí</button>
+
+        </form>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

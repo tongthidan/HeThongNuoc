@@ -24,11 +24,16 @@ public class Bill implements Serializable{
 	@Column(name ="month_use")
 	private int monthUse;
 	
-	@Column(name ="so_nuoc")
-	private int soNuoc;
+	@Column(name ="chi_so_cu")
+	private int CSCu;
 	
-	@Column(name = "Total")
-	private float toTal;
+	@Column(name = "chi_so_moi")
+	private int CSMoi;
+	
+	@Column(name = "thanh_tien")
+	private float thanhTien;
+	@Column(name = "tien_thue")
+	private float tienThue;
 	
 	@Column(name ="Status")
 	private String status;
@@ -74,20 +79,36 @@ public class Bill implements Serializable{
 		this.monthUse = monthUse;
 	}
 
-	public int getSoNuoc() {
-		return soNuoc;
+	public int getCSCu() {
+		return CSCu;
 	}
 
-	public void setSoNuoc(int soNuoc) {
-		this.soNuoc = soNuoc;
+	public void setCSCu(int cSCu) {
+		CSCu = cSCu;
 	}
 
-	public float getToTal() {
-		return toTal;
+	public int getCSMoi() {
+		return CSMoi;
 	}
 
-	public void setToTal(float toTal) {
-		this.toTal = toTal;
+	public void setCSMoi(int cSMoi) {
+		CSMoi = cSMoi;
+	}
+
+	public float getThanhTien() {
+		return thanhTien;
+	}
+
+	public void setThanhTien(float thanhTien) {
+		this.thanhTien = thanhTien;
+	}
+
+	public float getTienThue() {
+		return tienThue;
+	}
+
+	public void setTienThue(float tienThue) {
+		this.tienThue = tienThue;
 	}
 
 	public String getStatus() {
@@ -113,6 +134,6 @@ public class Bill implements Serializable{
 	public void setFamily(Family family) {
 		this.family = family;
 	}
-	
+
 	
 }

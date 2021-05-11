@@ -16,12 +16,11 @@ public class MoneyUnit implements Serializable {
 	 private long idMoneyUnit;
 	 
 
-	@Column(name ="Name")
-	private String name;
-	@Column(name ="dinhmuc")
-	private String dinhMuc;
-	@Column(name ="money_unit")
-	private String moneyUnit;
+	@Column(name ="bac")
+	private String bac;
+	
+	@Column(name ="gia_tri_bac")
+	private double moneyUnit;
 
 	public MoneyUnit() {
 		super();
@@ -32,25 +31,20 @@ public class MoneyUnit implements Serializable {
 	public void setIdMoneyUnit(long idMoneyUnit) {
 		this.idMoneyUnit = idMoneyUnit;
 	}
-
-	public String getName() {
-		return name;
+	public String getBac() {
+		return bac;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setBac(String bac) {
+		this.bac = bac;
 	}
-	public String getDinhMuc() {
-		return dinhMuc;
-	}
-	public void setDinhMuc(String dinhMuc) {
-		this.dinhMuc = dinhMuc;
-	}
-	public String getMoneyUnit() {
+	public double getMoneyUnit() {
 		return moneyUnit;
 	}
-	public void setMoneyUnit(String moneyUnit) {
+	public void setMoneyUnit(double moneyUnit) {
 		this.moneyUnit = moneyUnit;
 	}
+
+	
 	
 	
 }
