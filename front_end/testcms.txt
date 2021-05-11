@@ -1,0 +1,5 @@
+web-push send-notification --endpoint=<https://fcm.googleapis.com/fcm/send/dzv2laIALP0:APA91bEPRgdLflPLJjKzTRvvGv2sc2zJU-QJ9TSFI68_iKP-T5O1sknIX_WK8APEO57erGNzZUaWjrcYbn1bdGlic5c5d7iaAHDC5RRyGvM6E_IQddwM2foQv5h9zH4WvOxl-Hsb-1Fd> [--key=<BLtuUHLTOfRRS8Kqw8bSefMgikawbYSGa6j_KTixh9AdpjlI1SHoAQXUJTm5nStdt1becXX-q1rqNOfSsRtuO20>] [--auth=<qBjJUvwp1XpGqcgeaWWRPA>] [--payload=<"nguyen quang dong">] [--encoding=<aes128gcm>] [--ttl=<60>] [--vapid-subject=<vapid subject>] [--vapid-pubkey=<BOGQafPtj86CmYLCdNsguIS8Besa0qXc2zqqzpnixxOTrt7T_3YkrFLugzon9CVqLQB0wpqoiGQdzk1q7_YnsyM>] [--vapid-pvtkey=<9TaHc5jDBbAabxXo6GZP5Ucl34dwKbY2W7hib4MYgW8>] [--gcm-api-key=<AAAAIEas0NE:APA91bEyZmSlIZz2NShm4l4DiIrGH2XPA_MT-FOUkndP9Ng5yKuwibokEyBZVDI5FT8vRLOpUy_MSOEHt40PkUqOMqbHXaam-FYQT7nUopKLM41ZhsGVWf9r5nhR6C50n0jLSX5Ro-o4>]
+
+
+publicKey: 'Qk9HUWFmUHRqODZDbVlMQ2ROc2d1SVM4QmVzYTBxWGMyenFxenBuaXh4T1RydDdUXzNZa3JGTHVnem9uOUNWcUxRQjB3cHFvaUdRZHprMXE3X1luc3lN',
+      privateKey: 'OVRhSGM1akRCYkFhYnhYbzZHWlA1VWNsMzRkd0tiWTJXN2hpYjRNWWdXOA==',
