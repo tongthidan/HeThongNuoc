@@ -11,7 +11,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -24,22 +26,27 @@ public class Family implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
 	private long idFamily;
-	
+	@Column(name = "user_name")
+	private String username;
+	@Column(name = "pass_word")
+	private String password;
 	@Column(name ="ten_chu_ho")
 	private String tenChuHo;
-	
+	@Column(name ="so_can_cuoc")
+	private String SoCanCuoc;
 	@Column(name ="ma_ho")
 	private String maHo;
 	
-	@Column(name ="so_can_cuoc")
-	private String CMT;
+	
 	
 	@Column(name = "loai_ho")
 	private String loaiHo;
+	@Column(name = "so_ho_ngheo")
+	private String soHN;
 	@Column(name = "email")
 	private String email;
-	@Column(name = "sdt")
-	private long sdt;
+	@Column(nullable=true,name = "sdt")
+	private Long sdt;
 	
 	@Column(name = "dia_chi")
 	private String dia_chi;
@@ -47,6 +54,52 @@ public class Family implements Serializable{
 	private String trangThai;
 	
 	 
+	
+
+
+	public String getSoCanCuoc() {
+		return SoCanCuoc;
+	}
+
+
+	public void setSoCanCuoc(String soCanCuoc) {
+		SoCanCuoc = soCanCuoc;
+	}
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public String getSoHN() {
+		return soHN;
+	}
+	
+
+	public void setSdt(Long sdt) {
+		this.sdt = sdt;
+	}
+
+	public void setSoHN(String soHN) {
+		this.soHN = soHN;
+	}
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "family")
 	  private Set<Bill> listBill = new HashSet<>();
 
@@ -78,13 +131,9 @@ public class Family implements Serializable{
 		this.maHo = maHo;
 	}
 
-	public String getCMT() {
-		return CMT;
-	}
+	
 
-	public void setCMT(String cMT) {
-		CMT = cMT;
-	}
+
 
 	public String getLoaiHo() {
 		return loaiHo;

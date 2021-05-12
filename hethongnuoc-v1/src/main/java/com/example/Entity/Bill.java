@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +14,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @Entity
 @Table(name ="bill")
 public class Bill implements Serializable{
@@ -54,7 +59,8 @@ public class Bill implements Serializable{
 		this.moneyUnit = moneyUnit;
 	}
 
-	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@ManyToOne(fetch = FetchType.LAZY )
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@JoinColumn(name ="FamilyID",nullable =  false)
 	private Family family;
 
