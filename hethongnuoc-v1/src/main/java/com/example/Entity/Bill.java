@@ -16,6 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @Entity
@@ -25,6 +26,19 @@ public class Bill implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
 	private long idBill;
+	@OneToOne
+	@JoinColumn(name ="ID")
+	private Taxes taxes;
+	
+	@OneToOne
+	@JoinColumn(name ="ID",nullable = false)
+	private MoneyUnit moneyUnit;
+	
+	@ManyToOne(fetch = FetchType.LAZY )
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	@JoinColumn(name ="FamilyID",nullable =  false)
+	private Family family;
+
 	
 	@Column(name ="month_use")
 	private int monthUse;
@@ -42,15 +56,6 @@ public class Bill implements Serializable{
 	
 	@Column(name ="Status")
 	private String status;
-	
-	@OneToOne
-	@JoinColumn(name ="ID")
-	private Taxes taxes;
-	
-	@OneToOne
-	@JoinColumn(name ="ID",nullable = false)
-	private MoneyUnit moneyUnit;
-	
 	public MoneyUnit getMoneyUnit() {
 		return moneyUnit;
 	}
@@ -59,11 +64,7 @@ public class Bill implements Serializable{
 		this.moneyUnit = moneyUnit;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY )
-	@JsonProperty(access = Access.WRITE_ONLY)
-	@JoinColumn(name ="FamilyID",nullable =  false)
-	private Family family;
-
+	
 	
 	public Bill() {
 		super();
@@ -75,6 +76,22 @@ public class Bill implements Serializable{
 
 	public void setIdBill(long idBill) {
 		this.idBill = idBill;
+	}
+
+	public Taxes getTaxes() {
+		return taxes;
+	}
+
+	public void setTaxes(Taxes taxes) {
+		this.taxes = taxes;
+	}
+
+	public Family getFamily() {
+		return family;
+	}
+
+	public void setFamily(Family family) {
+		this.family = family;
 	}
 
 	public int getMonthUse() {
@@ -125,21 +142,7 @@ public class Bill implements Serializable{
 		this.status = status;
 	}
 
-	public Taxes getTaxes() {
-		return taxes;
-	}
-
-	public void setTaxes(Taxes taxes) {
-		this.taxes = taxes;
-	}
-
-	public Family getFamily() {
-		return family;
-	}
-
-	public void setFamily(Family family) {
-		this.family = family;
-	}
+	
 
 	
 }

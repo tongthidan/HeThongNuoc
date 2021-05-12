@@ -17,7 +17,7 @@ public class Taxes implements Serializable{
 	@Column(name ="name_taxes")
 	private String nameTaxes;
 	@Column(name ="value_taxes")
-	private double gia_tri_bac;
+	private double value_taxes;
 	
 	
 	public Taxes() {
@@ -45,14 +45,17 @@ public class Taxes implements Serializable{
 	}
 
 
-	public double getGia_tri_bac() {
-		return gia_tri_bac;
+	public double getValue_taxes() {
+		return value_taxes;
 	}
 
 
-	public void setGia_tri_bac(double gia_tri_bac) {
-		this.gia_tri_bac = gia_tri_bac;
+	public void setValue_taxes(double value_taxes) {
+		this.value_taxes = value_taxes;
 	}
+
+
+	
 
 	
 	
