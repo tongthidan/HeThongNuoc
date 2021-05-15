@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -102,7 +103,7 @@ public class Family implements Serializable{
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "family")
-	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	  private Set<Bill> listBill = new HashSet<>();
 
 	public Family() {

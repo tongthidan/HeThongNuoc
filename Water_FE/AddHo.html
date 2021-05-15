@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thêm hộ sử dụng</title>
     <!-- Normalize V8.0.1 -->
     <link rel="stylesheet" href="./css/normalize.css" />
@@ -48,171 +47,220 @@
     <!-- Data Tables -->
     <link rel="stylesheet" type="text/css" href="./css/datatable.css" />
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
-</head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/addHo.js"></script>
+    <link
+      href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <main class="full-box main-container">
-        <!-- Nav lateral -->
-        <section class="full-box nav-lateral">
-            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
-            <div class="full-box nav-lateral-content">
-                <figure class="full-box nav-lateral-avatar">
-                    <!-- Logo trường và tên trường -->
-                    <i class="far fa-times-circle show-nav-lateral"></i>
-                    <img src="./assets/avatar/Avatar.png" class="img-fluid" alt="Avatar" />
-                    <figcaption class="roboto-medium text-center">Nước sạch Hà Nội
-                        <br />
-                        <p class="roboto-condensed-light">Công ty nước sạch Sông Đà</p>
-                    </figcaption>
-                    <!-- / Logo trường và tên trường -->
-                </figure>
-                <!-- menu -->
-                <nav class="full-box nav-lateral-menu">
-                    <ul>
+      <!-- Nav lateral -->
+      <section class="full-box nav-lateral">
+        <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+        <div class="full-box nav-lateral-content">
+          <figure class="full-box nav-lateral-avatar">
+            <!-- Logo trường và tên trường -->
+            <i class="far fa-times-circle show-nav-lateral"></i>
+            <img
+              src="./assets/avatar/Avatar.png"
+              class="img-fluid"
+              alt="Avatar"
+            />
+            <figcaption class="roboto-medium text-center">
+              Nước sạch Hà Nội
+              <br />
+              <p class="roboto-condensed-light">Công ty nước sạch Sông Đà</p>
+            </figcaption>
+            <!-- / Logo trường và tên trường -->
+          </figure>
+          <!-- menu -->
+          <nav class="full-box nav-lateral-menu">
+            <ul>
+              <li>
+                <a href="#" class="nav-btn-submenu"
+                  ><i class="fas fa-users fa-fw"></i>&nbsp; Quản lí hộ sử dụng
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="AddHo.html"
+                      ><i class="fas fa-plus fa-fw"></i>&nbsp; Thêm học hộ sử
+                      sụng</a
+                    >
+                  </li>
+                  <li>
+                    <a href="ListHo.html"
+                      ><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh
+                      sách hộ
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-                        <li>
-                            <a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i>&nbsp; Quản lí hộ sử
-                                dụng <i class="fas fa-chevron-down"></i></a>
-                            <ul>
-                                <li>
-                                    <a href="AddHo.html"><i class="fas fa-plus fa-fw"></i>&nbsp; Thêm học hộ sử
-                                        sụng</a>
-                                </li>
-                                <li>
-                                    <a href="ListHo.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách hộ
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+              <li>
+                <a href="#" class="nav-btn-submenu"
+                  ><i class="fas fa-pallet fa-fw"></i>&nbsp; Quản lí số nước
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="Sltieuthu.html"
+                      ><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Lượng
+                      nước tiêu thụ</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                        <li>
-                            <a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i>&nbsp; Quản lí số
-                                nước <i class="fas fa-chevron-down"></i></a>
-                            <ul>
+              <li>
+                <a href="#" class="nav-btn-submenu"
+                  ><i class="far fa-newspaper"></i>&nbsp; Quản lí Tiền nước
+                  <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="ListThanhtoan.html"
+                      ><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh
+                      sách Hóa đơn</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                                <li>
-                                    <a href="Sltieuthu.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Lượng
-                                        nước tiêu thụ</a>
-                                </li>
-                            </ul>
-                        </li>
+              <li></li>
+            </ul>
+          </nav>
+          <!-- /menu -->
+        </div>
+      </section>
 
-                        <li>
-                            <a href="#" class="nav-btn-submenu"><i class="far fa-newspaper"></i>&nbsp; Quản lí Tiền nước
-                                <i class="fas fa-chevron-down"></i></a>
-                            <ul>
+      <section class="full-box page-content">
+        <!-- /Thay đổi thông tin user, logout -->
+        <!-- Page header -->
 
-                                <li>
-                                    <a href="ListThanhtoan.html"><i class="fas fa-clipboard-list fa-fw"></i>&nbsp; Danh sách
-                                        Hóa đơn</a>
-                                </li>
-                            </ul>
-                        </li>
+        <div class="header">
+          <h1>Chi nhánh Văn Phú</h1>
+        </div>
+        <div class="dis">
+          <div class="inline-block breadscrum-section">
+            <span>Hộ sử dụng </span>
+            <i class="fa fa-angle-right"></i>
+            <span>Thêm hộ sử dụng</span>
+            <i class=""></i>
+          </div>
+        </div>
 
-                        <li>
+        <!--CONTENT-->
 
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /menu -->
+        <div class="container-fluid">
+          <h2 class="text-header">THÊM HỘ SỬ DỤNG</h2>
+
+          <div class="form-row">
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label for="lop">Mã Hộ:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ma_ho"
+                name="classname"
+              />
             </div>
-        </section>
-
-        <section class="full-box page-content">
-
-
-            <!-- /Thay đổi thông tin user, logout -->
-            <!-- Page header -->
-
-            <div class="header">
-                <h1>
-                    Chi nhánh Văn Phú
-                </h1>
+            &emsp;
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label for="khoi">Chủ hộ:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ten_chuho"
+                name="classname"
+              />
             </div>
-            <div class="dis">
-                <div class="inline-block breadscrum-section">
-                    <span>Hộ sử dụng </span>
-                    <i class="fa fa-angle-right"></i>
-                    <span>Thêm hộ sử dụng</span>
-                    <i class=""></i>
-                </div>
+          </div>
+          <div class="form-row">
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Số căn cước</label>
+              <input
+                type="text"
+                id="so_can_cuoc"
+                class="form-control"
+                placeholder=""
+              />
             </div>
-
-            <!--CONTENT-->
-
-            <div class="container-fluid">
-                <h2 class="text-header">
-                    THÊM HỘ SỬ DỤNG
-                </h2>
-
-                <form>
-                    <div class="form-row ">
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label for="lop">Mã Hộ:</label>
-                            <input type="text" class="form-control"  id="ma_ho" name="classname">
-                        </div>&emsp;
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label for="khoi">Chủ hộ:</label>
-                            <input type="text" class="form-control" id="name_chuho" name="classname">
-                        </div>
-
-                    </div>
-                    <div class="form-row ">
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Số căn cước</label>
-                            <input type="text" id="CMT" class="form-control" placeholder="">
-                        </div>&emsp;
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Địa chỉ</label>
-                            <input type="text" id="diachi" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-row ">
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Diện tính phí</label><br>
-                            <input type="radio" id="male" name="gender" value="male">
-                            <label for="ho_ngheo">Hộ nghèo</label>&emsp;
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="ho_su_dung">Hộ sử dụng</label>
-                        </div>&emsp;
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Số sổ hộ nghèo</label>
-                            <input type="text"   class="form-control" placeholder="" id="so_ho_ngheo">
-                        </div>
-                    </div>
-                    <div class="form-row ">
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Mail</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>&emsp;
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Số điện thoại</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-row ">
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Tên đăng nhập</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>&emsp;
-                        <div class="col-4 col-sm-4 form-group input-box">
-                            <label>Mật khẩu</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary bt-center">Thêm</button>
-
-                </form>
-
-
-                </form>
-
+            &emsp;
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Địa chỉ</label>
+              <input
+                type="text"
+                id="dia_chi"
+                class="form-control"
+                placeholder=""
+              />
             </div>
-        </section>
+          </div>
+          <div class="form-row">
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Diện tính phí</label><br />
+              <input type="radio" id="ho_ngheo" name="loaiHo" value="Hộ nghèo" />
+              <label for="ho_ngheo">Hộ nghèo</label>&emsp;
+              <input type="radio" id="ho_thuong" name="loaiHo" value="Hộ sử dụng" />
+              <label for="ho_su_dung">Hộ sử dụng</label>
+            </div>
+            &emsp;
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Số sổ hộ nghèo</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                id="so_ho_ngheo"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Email</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                id="email"
+              />
+            </div>
+            &emsp;
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Số điện thoại</label>
+              <input type="text" class="form-control" placeholder="" id="sdt" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Tên đăng nhập</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                id="username"
+              />
+            </div>
+            &emsp;
+            <div class="col-4 col-sm-4 form-group input-box">
+              <label>Mật khẩu</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder=""
+                id="password"
+              />
+            </div>
+          </div>
+          <button class="btn btn-primary bt-center" onclick="addHo()">
+            Thêm
+          </button>
+        </div>
+      </section>
     </main>
-
-
-</body>
-
+  </body>
 </html>

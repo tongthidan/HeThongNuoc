@@ -26,34 +26,41 @@ public class Bill implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="ID")
 	private long idBill;
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY )
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name ="ID")
 	private Taxes taxes;
 	
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY )
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name ="ID",nullable = false)
 	private MoneyUnit moneyUnit;
 	
 	@ManyToOne(fetch = FetchType.LAZY )
+//	
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name ="FamilyID",nullable =  false)
 	private Family family;
 
 	
 	@Column(name ="month_use")
-	private int monthUse;
+	private long monthUse;
 	
 	@Column(name ="chi_so_cu")
-	private int CSCu;
+	private long CSCu;
 	
 	@Column(name = "chi_so_moi")
-	private int CSMoi;
+	private long CSMoi;
+	@Column(name ="so_nuoc")
+	private long soNuoc;
 	
 	@Column(name = "thanh_tien")
 	private float thanhTien;
 	@Column(name = "tien_thue")
 	private float tienThue;
-	
+	@Column(name ="tong_tien")
+	private float tongTien;
 	@Column(name ="Status")
 	private String status;
 	public MoneyUnit getMoneyUnit() {
@@ -94,28 +101,36 @@ public class Bill implements Serializable{
 		this.family = family;
 	}
 
-	public int getMonthUse() {
+	public long getMonthUse() {
 		return monthUse;
 	}
 
-	public void setMonthUse(int monthUse) {
+	public void setMonthUse(long monthUse) {
 		this.monthUse = monthUse;
 	}
 
-	public int getCSCu() {
+	public long getCSCu() {
 		return CSCu;
 	}
 
-	public void setCSCu(int cSCu) {
+	public void setCSCu(long cSCu) {
 		CSCu = cSCu;
 	}
 
-	public int getCSMoi() {
+	public long getCSMoi() {
 		return CSMoi;
 	}
 
-	public void setCSMoi(int cSMoi) {
+	public void setCSMoi(long cSMoi) {
 		CSMoi = cSMoi;
+	}
+
+	public long getSoNuoc() {
+		return soNuoc;
+	}
+
+	public void setSoNuoc(long soNuoc) {
+		this.soNuoc = soNuoc;
 	}
 
 	public float getThanhTien() {
@@ -134,6 +149,14 @@ public class Bill implements Serializable{
 		this.tienThue = tienThue;
 	}
 
+	public float getTongTien() {
+		return tongTien;
+	}
+
+	public void setTongTien(float tongTien) {
+		this.tongTien = tongTien;
+	}
+
 	public String getStatus() {
 		return status;
 	}
@@ -142,6 +165,7 @@ public class Bill implements Serializable{
 		this.status = status;
 	}
 
+	
 	
 
 	

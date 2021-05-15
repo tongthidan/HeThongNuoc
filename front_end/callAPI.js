@@ -57,12 +57,13 @@ async function sendNotification() {
             user_id:"63",
             receiver_id: '70',
             entity_id: '100',
-            type_entity_id: '1',
+            type_entity_id: '1'
+        
         }
 
         const response = await axios({
             method: "post",
-            url: "http://localhost:3000/api/v1/notifications",
+            url: "http://localhost:8080/api/createNewFamily",
             data: dataSendNoti
         })
         console.log(response.data);
